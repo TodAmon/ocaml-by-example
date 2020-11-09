@@ -1,0 +1,4 @@
+(library
+ (name wahoo)
+ (public_name ocaml-by-example.Basic_lib_doc.Wahoo)
+)

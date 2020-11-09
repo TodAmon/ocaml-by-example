@@ -1,13 +1,16 @@
 (library
  ; Main library module name
  (name Basic_lib_doc)
- ; Public name is: pacakge_name.library_name
+ ; Public name is: package_name.library_name
  ; The package name is the name of the opam file at root of the project.
- (public_name ocaml-by-example.lib)
+ (public_name ocaml-by-example.Basic_lib_doc)
  ; Provide a list of modules for the library.
  ; This is only necessary if the modules in the current directory are used in
  ; multiple libraries or executables.
- (modules Basic_lib_doc))
+ (modules Basic_lib_doc)
+ ; Bring in libraries using their private name
+ (libraries wahoo)
+)
 
 (executable
  (name Main)
@@ -17,4 +20,4 @@
  ; current directory.
  (modules :standard \ Basic_lib_doc)
  ; Use the locally defined library as a dependency.
- (libraries ocaml-by-example.lib))
+ (libraries ocaml-by-example.Basic_lib_doc))
